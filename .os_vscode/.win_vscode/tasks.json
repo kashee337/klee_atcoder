@@ -1,0 +1,25 @@
+{
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "g++ build active file",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "command": "/usr/bin/g++",
+        "args": [
+          "-g",
+          "-O0",
+          "-std=c++14",
+          "${file}",
+          "-o",
+          "${fileDirname}/a.out"
+        ],
+        "problemMatcher": [
+          "$gcc"
+        ]
+      }
+    ],
+    "version": "2.0.0"
+  }

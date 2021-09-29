@@ -1,0 +1,11 @@
+*
+!*/
+!*.*
+old
+.vscode
+lib2snippet/
+*.dSYM
+*.out
+problems/
+.DS_Store
+.mypy_cache
