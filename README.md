@@ -5,7 +5,7 @@ for Atcoder(competitive programming)
 * setup  
 ```$ ./setup.sh```
 
-* regist snippet  
+* register your snippet  
 ```$ tosnip```  
 
 * preparation for the contest  
