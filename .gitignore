@@ -8,3 +8,4 @@ lib2snippet/
 *.out
 .DS_Store
 .mypy_cache
+problems/
