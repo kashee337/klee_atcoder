@@ -2,10 +2,12 @@
 echo -n 'mac or win or linux?[m/n/l]: '
 read env_name
 if [ "$env_name" = 'm' -o "$env_name" = 'l' ]; then
-    cp .os_vscode/.win_vscode .vscode/
+    cp -r .os_vscode/.mac_vscode ./
+    mv -i .mac_vscode .vscode
     echo 'copy .mac_vscode as .vscode'
 elif [ "$env_name" = 'n']; then
-    cp .os_vscode/.win_vscode .vscode/
+    cp -r .os_vscode/.win_vscode ./
+    mv -i .win_vscode .vscode
     echo 'copy .win_vscode as .vscode'
 fi
 
