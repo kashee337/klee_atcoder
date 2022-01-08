@@ -27,4 +27,16 @@ template <typename T> struct BIT {
             i += i & (-i);
         }
     }
+    ll k_th_num(int k) {
+        ll l = 0, r = n;
+        while (l + 1 < r) {
+            ll m = (l + r) / 2;
+            ll v = sum(m, n - 1);
+            if (v < k)
+                r = m;
+            else
+                l = m;
+        }
+        return r;
+    }
 };
