@@ -1,8 +1,11 @@
 struct UnionFind {
     vector<int> par;
-
-    UnionFind(int n) : par(n, -1) {}
-    void init(int n) { par.assign(n, -1); }
+    int group_num;
+    UnionFind(int n) : par(n, -1), group_num(n) {}
+    void init(int n) {
+        par.assign(n, -1);
+        group_num = n;
+    }
 
     int root(int x) {
         if (par[x] < 0)
@@ -20,8 +23,11 @@ struct UnionFind {
         if (par[x] > par[y]) swap(x, y);  // merge technique
         par[x] += par[y];
         par[y] = x;
+        group_num--;
         return true;
     }
 
     int size(int x) { return -par[root(x)]; }
+
+    int group_size() { return group_num; }
 };
